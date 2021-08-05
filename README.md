@@ -9,22 +9,44 @@ This is the first kata about a MERN CRUD without login & authorization. It consi
 * Bulma
 
 
+# Proyect Structure
+~~~
+/project
+|
+|_/back-end/
+|   |_package.json
+|
+
+~~~
 
 
 
 
+# 1. Server with Express
+Let's isolate all our Back-End configuration in a folder called `/backEnd`. We'll initiate npm (`npm init -y` > `package.json`) to registered our dependencies.
+
+Let's create a `server.js` where to build our server, a `.env` file to save our port, and a `config.js`.
+
+This file will be an object and will be our first module to export, keeping all our config variables together to use their properties when necesary.
+
+## Packages
+* express : server framework
+* standard : tests
+* nodemon : hot reload
+* dotenv : .dontenv accessible
 
 
 
+# 2. Mongoose to interface MongoDB
+Let's isolate all our database configuration in a folder called `/db`, and `mongodb.js` file to connect with MongoDB.
 
+The connection will be setup by an async function.
 
+###### Important
+In our connection to MongoDB we use the Default Port (27017), this is not recommended in Production because its a well known default port that expose our database to a vulnerability.
 
-
-
-
-
-
-
+## Packages
+* mongoose : MongoDB framework
 
 
 
@@ -50,7 +72,7 @@ ssh-add ~/.ssh/id_rsa
 cat id_rsa.pub
 ~~~
 
-2. config file
+2. `config` file
 
 We can configure ssh to send a use a specific encryption key depending on the host. It's possible to have several aliases for the same hostname and create a reference to diferents users with it own authorization.
 
