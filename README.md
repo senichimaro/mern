@@ -1,11 +1,12 @@
 # MERN Proyect
-This is the first kata about a MERN CRUD without login & authorization. It consist of one page web app where to create, read, update and delete products.
+This is the first kata about a MERN CRUD without login & authorization. It consist of one page web app where to create, read, update and delete products. It will use Bulma React Framework to a plaine UI/UX.
 
 # Packages
 * MongoDB interfaced by Mongoose
 * Express Web Server Framework
 * React Framework
 * NodeJs based
+* Bulma
 
 
 
@@ -50,6 +51,7 @@ cat id_rsa.pub
 ~~~
 
 2. config file
+
 We can configure ssh to send a use a specific encryption key depending on the host. It's possible to have several aliases for the same hostname and create a reference to diferents users with it own authorization.
 
 Create a `config` file in  `~/.ssh/` :
@@ -68,6 +70,7 @@ Host user2
 ~~~
 
 3. Local repo `config` file in `./project-name/.git/config`
+
 The configuration information overrides each other. The global .gitconfig where you already configured your SSH Keys/User Information is overriden by The global .gitconfig of a local gitconfig - the file "config" in your .git folder..
 
 A `./project-name/.git/config` will be more or less like this example:
